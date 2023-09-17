@@ -1,0 +1,9 @@
+sort1 uses: bubble sorting.
+How do you know?: Sort1 is way faster in sorted with O(n) algorithm  than in reversed with O(n**2) algorithm.
+
+sort2 uses: merged sorting
+How do you know?: Sort2 is the fastest in sorted and reversed examples. The time is almost identical in both cases.
+
+sort3 uses: selection sorting.
+How do you know?: Sort3 is the slowest algorithm in both cases. The time is almost identical in both worst and best cases.
+
