@@ -1,0 +1,6 @@
+Energy: The average energy of the top 100 songs could give an indication of the overall intensity and liveliness of the listener's music preferences. High energy may suggest a preference for upbeat and energetic music, while low energy may indicate a preference for calmer, more mellow songs.
+
+Valence: Valence, which represents the positivity or happiness of the music, can suggest whether the listener tends to enjoy more cheerful and uplifting songs or leans towards music with a more somber or melancholic tone.
+
+Danceability: The average danceability of the songs can reveal whether the listener is inclined towards music that is easy to dance to. High danceability suggests an affinity for rhythmic and danceable tracks.
+
