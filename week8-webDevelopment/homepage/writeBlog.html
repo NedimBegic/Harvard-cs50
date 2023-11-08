@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">My Pets</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="writeBlog.html" ">Write Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container f">
+        <h2>Make a blog</h2>
+        <p>
+           Share your thoughts and stories about your pets with the world. Whether you have a fluffy cat, a loyal dog, or any other furry, scaly, or feathery friend, this is the place to share your experiences, tips, and love for your pets.
+        </p>
+
+        <form id="blogForm" action="your_submission_handler.php" method="post" enctype="multipart/form-data">
+            <label for="blogTitle">Blog Title:</label><br>
+            <input type="text" id="blogTitle" name="blogTitle" required><br><br>
+
+            <label for="blogContent">Blog Content:</label><br>
+            <textarea id="blogContent" name="blogContent" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="blogPhoto">Upload a Photo:</label><br>
+            <input type="file" id="blogPhoto" name="blogPhoto"><br><br>
+
+            <button class="btn btn-primary" onClick="onSubmit(event)">Submit</button>
+        </form>
+        <div id="successMessage" style="display: none;" class="alert alert-success mt-3">
+            Form submitted successfully!
+        </div>
+    </div>
+    <script>
+        function onSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Display the success message
+            const successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block";
+        }
+    </script>
+</body>
+</html>
