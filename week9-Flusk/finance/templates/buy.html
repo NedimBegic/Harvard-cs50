@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h2 class="mb-4">Buy Stocks</h2>
+
+        <!-- Buy stocks form -->
+        <form action="{{ url_for('buy') }}" method="post">
+            <div class="form-group">
+                <label for="symbol">Stock Symbol:</label>
+                <input type="text" class="form-control" id="symbol" name="symbol" required>
+            </div>
+            <div class="form-group">
+                <label for="shares">Number of Shares:</label>
+                <input type="number" class="form-control" id="shares" name="shares" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Buy</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Get Stock Quote
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h2 class="mb-4">Get Stock Quote</h2>
+
+        <!-- Stock quote form -->
+        <form action="{{ url_for('quote') }}" method="post">
+            <div class="form-group">
+                <label for="symbol">Stock Symbol:</label>
+                <input type="text" class="form-control" id="symbol" name="symbol" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Quote</button>
+        </form>
+    </div>
+{% endblock %}

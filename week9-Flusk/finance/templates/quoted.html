@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h2 class="mb-4">Stock Quote</h2>
+
+        <!-- Display stock information -->
+        {% if stock %}
+            <p class="lead">Stock Symbol: {{ stock["symbol"] }}</p>
+            <p class="lead">Stock Name: {{ stock["name"] }}</p>
+            <p class="lead">Stock Price: {{ usd(stock["price"]) }}</p>
+        {% else %}
+            <p class="lead">Invalid stock symbol. Please try again.</p>
+        {% endif %}
+
+        <!-- Link to go back to the quote page -->
+        <a href="{{ url_for('quote') }}" class="btn btn-primary">Get Another Quote</a>
+    </div>
+{% endblock %}

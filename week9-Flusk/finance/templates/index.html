@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h2 class="mb-4">Portfolio Overview</h2>
+
+        <!-- Display user's cash balance -->
+        <p class="lead">Cash Balance: {{ usd(user_cash) }}</p>
+
+        <!-- Display stock portfolio -->
+        <h3 class="mb-3">Stock Portfolio</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                    <tr>
+                        <td>{{ stock["symbol"] }}</td>
+                        <td>{{ stock["name"] }}</td>
+                        <td>{{ stock["shares"] }}</td>
+                        <td>{{ usd(stock["price"]) }}</td>
+                        <td>{{ usd(stock["total_value"]) }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Display total portfolio value -->
+        <p class="lead">Total Portfolio Value: {{ usd(total_portfolio_value) }}</p>
+    </div>
+{% endblock %}
